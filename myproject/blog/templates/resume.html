@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Blog Page</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 0.5rem;
+}
+
+main {
+    width: 80%;
+    margin: 2rem auto;
+}
+
+.post {
+    background: #fff;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post h2 {
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.post .date {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+</style></head>
+<body>
+    <header>
+        <h1>{{name}} </h1>
+        <h5>{{address}}</h5>
+        <p>Hobbies: {{hobbies}}</p>
+        
+    </header>
+    <main>
+        {% for blogs in blog %}
+        <article class="post">
+            <h2>{{blogs.title}}</h2>
+            <p class="date">Posted on November 12, 2024</p>
+            <p>This is a short excerpt of the blog post content. Read more about my insights and experiences...</p>
+        </article>
+        {% endfor %}
+
+    </main>
+    <footer>
+        <p>&copy; 2024 My Blog. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+
+ 
+

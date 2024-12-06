@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Blog Home
+{% endblock %}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Save</button>
+</form>
+<a href="{% url 'student_list' %}">Cancel</a>
+
+
+{% endblock %}
+

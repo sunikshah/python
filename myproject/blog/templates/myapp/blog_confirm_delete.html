@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Blog Home
+{% endblock %}
+
+{% block content %}
+<!-- myapp/templates/myapp/blog_confirm_delete.html -->
+<h1>Delete Blog</h1>
+<p>Are you sure you want to delete "{{ blog.title }}"?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Delete</button>
+</form>
+<a href="{% url 'blog_list' %}">Cancel</a>
+
+
+{% endblock %}
+
